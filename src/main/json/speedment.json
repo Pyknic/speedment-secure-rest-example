@@ -1,0 +1,114 @@
+{
+  "config" : {
+    "expanded" : true,
+    "companyName" : "speedment",
+    "name" : "speedment",
+    "packageLocation" : "src/main/java/",
+    "packageName" : "com.speedment.example.securerest.db",
+    "dbmses" : [
+      {
+        "expanded" : true,
+        "port" : 3306,
+        "schemas" : [
+          {
+            "tables" : [
+              {
+                "expanded" : true,
+                "primaryKeyColumns" : [
+                  {
+                    "expanded" : true,
+                    "name" : "id",
+                    "ordinalPosition" : 1
+                  }
+                ],
+                "indexes" : [
+                  {
+                    "expanded" : false,
+                    "unique" : true,
+                    "name" : "PRIMARY",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "expanded" : true,
+                        "name" : "id",
+                        "ordinalPosition" : 1
+                      }
+                    ],
+                    "enabled" : true
+                  },
+                  {
+                    "unique" : true,
+                    "name" : "username",
+                    "indexColumns" : [
+                      {
+                        "orderType" : "ASC",
+                        "name" : "username",
+                        "ordinalPosition" : 1
+                      }
+                    ]
+                  }
+                ],
+                "columns" : [
+                  {
+                    "databaseType" : "java.lang.Long",
+                    "expanded" : true,
+                    "typeMapper" : "com.speedment.runtime.typemapper.primitive.PrimitiveTypeMapper",
+                    "nullable" : false,
+                    "autoIncrement" : true,
+                    "name" : "id",
+                    "nullableImplementation" : "OPTIONAL",
+                    "ordinalPosition" : 1,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "autoIncrement" : false,
+                    "name" : "username",
+                    "nullableImplementation" : "OPTIONAL",
+                    "ordinalPosition" : 2,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "autoIncrement" : false,
+                    "name" : "password",
+                    "nullableImplementation" : "OPTIONAL",
+                    "ordinalPosition" : 3,
+                    "enabled" : true
+                  },
+                  {
+                    "databaseType" : "java.lang.String",
+                    "expanded" : true,
+                    "nullable" : false,
+                    "enumConstants" : "USER,ADMIN",
+                    "autoIncrement" : false,
+                    "name" : "role",
+                    "nullableImplementation" : "OPTIONAL",
+                    "ordinalPosition" : 4,
+                    "enabled" : true
+                  }
+                ],
+                "name" : "account",
+                "packageName" : "com.speedment.example.securerest.db.account",
+                "enabled" : true
+              }
+            ],
+            "expanded" : true,
+            "name" : "securerest",
+            "enabled" : true
+          }
+        ],
+        "name" : "db0",
+        "typeName" : "MySQL",
+        "ipAddress" : "127.0.0.1",
+        "enabled" : true,
+        "username" : "root"
+      }
+    ],
+    "enabled" : true
+  }
+}
